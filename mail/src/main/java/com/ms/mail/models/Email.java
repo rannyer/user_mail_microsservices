@@ -17,11 +17,14 @@ public class Email {
     private String text;
     private LocalDateTime sendDateEmail;
     private StatusEmail statusEmail;
+    private Long userId;
+
 
     public Email() {
+
     }
 
-    public Email(Long id, String emailFromn, String emailTo, String subject, String text, LocalDateTime sendDateEmail, StatusEmail statusEmail) {
+    public Email(Long id, String emailFromn, String emailTo, String subject, String text, LocalDateTime sendDateEmail, StatusEmail statusEmail, Long userId) {
         this.id = id;
         this.emailFromn = emailFromn;
         this.emailTo = emailTo;
@@ -29,6 +32,7 @@ public class Email {
         this.text = text;
         this.sendDateEmail = sendDateEmail;
         this.statusEmail = statusEmail;
+        this.userId = userId;
     }
 
     public Long getId() {
@@ -85,5 +89,13 @@ public class Email {
 
     public void setStatusEmail(StatusEmail statusEmail) {
         this.statusEmail = statusEmail;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 }
